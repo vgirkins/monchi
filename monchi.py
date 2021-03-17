@@ -7,7 +7,7 @@ SCREEN_WIDTH = 950
 SCREEN_HEIGHT = 720
 STRAWBERRY_SPRITE_SIZE = 0.02
 STRAWBERRY_SPRITE_QUANTITY = 20
-SPLATTER_SPRITE_SIZE = 0.1
+SPLATTER_SPRITE_SIZE = 0.15
 POISON_SPRITE_SIZE = 0.05
 POISON_SPRITE_QUANTITY = 8
 MONCHI_SPRITE_SIZE = 0.15
@@ -34,14 +34,14 @@ class MyGame(arcade.Window):
         self.monchiSplatSound = arcade.Sound("Spit_Splat-Mike_Koenig-1170500447.wav")
         for i in range(STRAWBERRY_SPRITE_QUANTITY):
             strawberry = arcade.Sprite("strawberry.png", STRAWBERRY_SPRITE_SIZE)
-            strawberry.center_x = randint(1, SCREEN_WIDTH)
-            strawberry.center_y = randint(1, SCREEN_HEIGHT)
+            strawberry.center_x = randint(1, SCREEN_WIDTH - 100)
+            strawberry.center_y = randint(100, SCREEN_HEIGHT)
             self.strawberryList.append(strawberry)
         
         for i in range(POISON_SPRITE_QUANTITY):
             poison = arcade.Sprite("poison.png", POISON_SPRITE_SIZE)
-            poison.center_x = randint(1, SCREEN_WIDTH)
-            poison.center_y = randint(1, SCREEN_HEIGHT)
+            poison.center_x = randint(1, SCREEN_WIDTH - 100)
+            poison.center_y = randint(100, SCREEN_HEIGHT)
             self.poisonList.append(poison)
 
 
